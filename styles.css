@@ -3,22 +3,22 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-    background: linear-gradient(135deg, #0066ff, #000000);
+    background: linear-gradient(135deg, #7cff70, #006b02); 
     color: #333;
     line-height: 1.6;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     min-height: 100vh;
-    overflow: hidden;
+    overflow-y: auto;
 }
 
 /* Contenedor principal */
 .container {
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(190, 252, 201, 0.95);
     padding: 3rem;
     border-radius: 20px;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
     max-width: 700px;
     text-align: center;
     backdrop-filter: blur(15px);
@@ -27,6 +27,7 @@ body {
     overflow: hidden;
     transform: scale(0.95);
     transition: transform 0.5s ease, box-shadow 0.5s ease;
+    margin: 2rem;
 }
 
 .container::before {
@@ -36,7 +37,7 @@ body {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle, rgba(255, 126, 95, 0.1), rgba(254, 180, 123, 0.05));
+    background: radial-gradient(circle, rgba(77, 182, 172, 0.1), rgba(129, 199, 132, 0.05)); /* Degradado radial en tonos verdes */
     animation: rotate 10s linear infinite;
     z-index: -1;
 }
@@ -54,7 +55,7 @@ body {
 h1 {
     font-family: 'Playfair Display', serif;
     font-size: 3.5rem;
-    color: #2c3e50;
+    color: #2e7d32; /* Verde oscuro elegante */
     margin-bottom: 1.5rem;
     position: relative;
     display: inline-block;
@@ -68,7 +69,7 @@ h1::after {
     bottom: -10px;
     width: 100%;
     height: 3px;
-    background: linear-gradient(90deg, #000000, #feb47b);
+    background: linear-gradient(90deg, #66bb6a, #81c784); /* Degradado verde */
     border-radius: 2px;
     animation: underline 1.5s ease-in-out infinite alternate;
 }
@@ -93,7 +94,7 @@ p {
 
 /* Resaltado */
 .highlight {
-    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+    background: linear-gradient(90deg, #66bb6a, #81c784); /* Degradado verde */
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -117,7 +118,7 @@ p {
 /* Efecto hover en el contenedor */
 .container:hover {
     transform: scale(1);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
     transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
@@ -157,5 +158,20 @@ p {
 
     p {
         font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    p {
+        font-size: 1rem;
     }
 }
